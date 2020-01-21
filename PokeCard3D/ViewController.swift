@@ -23,6 +23,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
+        sceneView.autoenablesDefaultLighting = true
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +37,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             configuration.trackingImages = imagesToTrack
             
-            configuration.maximumNumberOfTrackedImages = 1
+            configuration.maximumNumberOfTrackedImages = 4
             
             print("Images successfully added")
             
@@ -73,6 +75,65 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             node.addChildNode(planeNode)
             
+            if imageAnchor.referenceImage.name == "bulbasaur-card" {
+                
+                if let pokeScene = SCNScene(named: "art.scnassets/Bulbasaur/bulbasaur.scn") {
+                              
+                    if let pokeNode = pokeScene.rootNode.childNodes.first {
+                                  
+                        pokeNode.eulerAngles.x = .pi / 2
+                                  
+                        planeNode.addChildNode(pokeNode)
+                                  
+                    };
+                              
+                };
+            };
+            
+            if imageAnchor.referenceImage.name == "charmander-card" {
+                          
+                if let pokeScene = SCNScene(named: "art.scnassets/Charmander/charmander.scn") {
+                                        
+                    if let pokeNode = pokeScene.rootNode.childNodes.first {
+                                            
+                        pokeNode.eulerAngles.x = .pi / 2
+                                            
+                        planeNode.addChildNode(pokeNode)
+                                            
+                    };
+                                        
+                };
+            };
+            
+            if imageAnchor.referenceImage.name == "eevee-card" {
+                          
+                if let pokeScene = SCNScene(named: "art.scnassets/Eevee/eevee.scn") {
+                                        
+                    if let pokeNode = pokeScene.rootNode.childNodes.first {
+                                            
+                        pokeNode.eulerAngles.x = .pi / 2
+                                            
+                        planeNode.addChildNode(pokeNode)
+                                            
+                    };
+                                        
+                };
+            };
+            
+            if imageAnchor.referenceImage.name == "pikachu-card" {
+                          
+                if let pokeScene = SCNScene(named: "art.scnassets/Pikachu/pikachu.scn") {
+                                        
+                    if let pokeNode = pokeScene.rootNode.childNodes.first {
+                                            
+                        pokeNode.eulerAngles.x = .pi / 2
+                                            
+                        planeNode.addChildNode(pokeNode)
+                                            
+                    };
+                                        
+                };
+            };
         };
         
         return node
