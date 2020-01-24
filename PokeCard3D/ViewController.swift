@@ -37,7 +37,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             configuration.trackingImages = imagesToTrack
             
-            configuration.maximumNumberOfTrackedImages = 4
+            configuration.maximumNumberOfTrackedImages = 11
             
             print("Images successfully added")
             
@@ -127,6 +127,113 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                     if let pokeNode = pokeScene.rootNode.childNodes.first {
                                             
                         pokeNode.eulerAngles.x = .pi / 2
+                                            
+                        planeNode.addChildNode(pokeNode)
+                                            
+                    };
+                                        
+                };
+            };
+            
+            if imageAnchor.referenceImage.name == "mew-card" {
+                          
+                if let pokeScene = SCNScene(named: "art.scnassets/Mew/mew.scn") {
+                                        
+                    if let pokeNode = pokeScene.rootNode.childNodes.first {
+                                            
+                        pokeNode.eulerAngles.x = .pi / 2
+                                            
+                        planeNode.addChildNode(pokeNode)
+                                            
+                    };
+                                        
+                };
+            };
+            
+            if imageAnchor.referenceImage.name == "gyarados-card" {
+                          
+                if let pokeScene = SCNScene(named: "art.scnassets/Gyarados/gyarados.scn") {
+                                        
+                    if let pokeNode = pokeScene.rootNode.childNodes.first {
+                                            
+                        pokeNode.eulerAngles.x = .pi / 2
+                                            
+                        planeNode.addChildNode(pokeNode)
+                                            
+                    };
+                                        
+                };
+            };
+            
+            if imageAnchor.referenceImage.name == "charizard-card" {
+                          
+                if let pokeScene = SCNScene(named: "art.scnassets/Charizard/charizard.scn") {
+                                        
+                    if let pokeNode = pokeScene.rootNode.childNodes.first {
+                                            
+                        pokeNode.eulerAngles.x = .pi / 2
+                                            
+                        planeNode.addChildNode(pokeNode)
+                                            
+                    };
+                                        
+                };
+            };
+            
+            if imageAnchor.referenceImage.name == "gengar-card" {
+                          
+                if let pokeScene = SCNScene(named: "art.scnassets/Gengar/gengar.scn") {
+                                        
+                    if let pokeNode = pokeScene.rootNode.childNodes.first {
+                                            
+                        pokeNode.eulerAngles.x = .pi / 2
+                                            
+                        planeNode.addChildNode(pokeNode)
+                                            
+                    };
+                                        
+                };
+            };
+            
+            if imageAnchor.referenceImage.name == "lugia-card" {
+                          
+                if let pokeScene = SCNScene(named: "art.scnassets/Lugia/lugia.scn") {
+                                        
+                    if let pokeNode = pokeScene.rootNode.childNodes.first {
+                                            
+                        pokeNode.eulerAngles.x = .pi / 2
+                        
+                        pokeNode.worldPosition.y = 0.15
+                                            
+                        planeNode.addChildNode(pokeNode)
+                                            
+                    };
+                                        
+                };
+            };
+            
+            if imageAnchor.referenceImage.name == "mewtwo-card" {
+                          
+                if let pokeScene = SCNScene(named: "art.scnassets/Mewtwo/mewtwo.scn") {
+                                        
+                    if let pokeNode = pokeScene.rootNode.childNodes.first {
+                                            
+                        pokeNode.eulerAngles.x = .pi / 2
+                                            
+                        planeNode.addChildNode(pokeNode)
+                                            
+                    };
+                                        
+                };
+            };
+            
+            if imageAnchor.referenceImage.name == "jigglypuff-card" {
+                          
+                if let pokeScene = SCNScene(named: "art.scnassets/Jigglypuff/jigglypuff.scn") {
+                                        
+                    if let pokeNode = pokeScene.rootNode.childNodes.first {
+                                            
+                        pokeNode.eulerAngles.x = .pi / 1
                                             
                         planeNode.addChildNode(pokeNode)
                                             
